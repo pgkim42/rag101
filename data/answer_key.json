@@ -1,0 +1,96 @@
+{
+  "source": "https://testingurl.dev/ai/corpus",
+  "note": "ko 질문과 docs/ko 본문은 영어 원문을 공부용으로 옮긴 것이다. TestingURL 공식 번역이 아니다.",
+  "items": [
+    {
+      "id": 1,
+      "file": "01-photosynthesis.md",
+      "en": "How do plants convert sunlight into energy?",
+      "ko": "식물은 햇빛을 어떻게 에너지로 바꾸나?"
+    },
+    {
+      "id": 2,
+      "file": "02-water-cycle.md",
+      "en": "Why does it rain?",
+      "ko": "왜 비가 내리나?"
+    },
+    {
+      "id": 3,
+      "file": "03-firewalls.md",
+      "en": "What blocks unauthorized network traffic?",
+      "ko": "허가되지 않은 네트워크 통신을 무엇이 막나?"
+    },
+    {
+      "id": 4,
+      "file": "04-compound-interest.md",
+      "en": "Why does my savings account grow faster over time?",
+      "ko": "예금이 시간이 갈수록 더 빨리 늘어나는 이유는?"
+    },
+    {
+      "id": 5,
+      "file": "05-vaccines.md",
+      "en": "How does the immune system learn to fight a disease before I catch it?",
+      "ko": "면역 체계는 병에 걸리기 전에 어떻게 병원체에 맞서도록 배우나?"
+    },
+    {
+      "id": 6,
+      "file": "06-dns.md",
+      "en": "How does my browser find a website's server?",
+      "ko": "브라우저는 웹사이트 서버를 어떻게 찾나?"
+    },
+    {
+      "id": 7,
+      "file": "07-pythagorean-theorem.md",
+      "en": "How do I find the missing side of a right triangle?",
+      "ko": "직각삼각형에서 모르는 변의 길이는 어떻게 구하나?"
+    },
+    {
+      "id": 8,
+      "file": "08-solar-panels.md",
+      "en": "How does sunlight get turned into electricity?",
+      "ko": "햇빛은 어떻게 전기가 되나?"
+    },
+    {
+      "id": 9,
+      "file": "09-ocean-tides.md",
+      "en": "Why does the ocean rise and fall twice a day?",
+      "ko": "바닷물은 왜 하루에 두 번 올랐다 내리나?"
+    },
+    {
+      "id": 10,
+      "file": "10-http-vs-https.md",
+      "en": "Why do browsers say a site is not secure?",
+      "ko": "브라우저는 왜 사이트가 안전하지 않다고 표시하나?"
+    },
+    {
+      "id": 11,
+      "file": "11-four-stroke-engine.md",
+      "en": "What are the four stages of a car engine's cycle?",
+      "ko": "자동차 엔진 한 순환의 네 단계는 무엇인가?"
+    },
+    {
+      "id": 12,
+      "file": "12-inflation.md",
+      "en": "Why does money buy less over time?",
+      "ko": "돈으로 살 수 있는 양이 시간이 갈수록 줄어드는 이유는?"
+    },
+    {
+      "id": 13,
+      "file": "13-noise-cancelling-headphones.md",
+      "en": "How do headphones block out engine noise?",
+      "ko": "헤드폰은 엔진 소음을 어떻게 막나?"
+    },
+    {
+      "id": 14,
+      "file": "14-carbon-cycle.md",
+      "en": "How does carbon move between the air and living things?",
+      "ko": "탄소는 공기와 생물 사이를 어떻게 오가나?"
+    },
+    {
+      "id": 15,
+      "file": "15-vpns.md",
+      "en": "How can I hide my IP address on public Wi-Fi?",
+      "ko": "공공 와이파이에서 IP 주소를 어떻게 숨기나?"
+    }
+  ]
+}
