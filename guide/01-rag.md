@@ -4,6 +4,8 @@
 
 > 기초부터 읽으려면 [A. RAG 이전에 알아야 할 것](A-before-rag.md)을 먼저 보자. 모델이 정보를 얻는 세 곳, RAG와 Fine-tuning의 차이를 다룬다.
 
+> 이 장을 처음 본다면 [처음 읽는 사람용 보충](01-beginner.md)을 같이 보자. 1장이 가정하고 넘어간 말, 모델 없이 세 단계를 만드는 코드, 명령을 돌릴 때 막히는 팁이 있다.
+
 ## 이 장에서 알게 되는 것
 
 - RAG의 세 단계와 각 단계가 하는 일
@@ -94,6 +96,9 @@ guide/                 이 교재
 ## 직접 해 보기
 
 ```bash
+# 모델 없이 세 단계만 먼저 보기
+.venv/bin/python labs/basics/tiny_rag.py
+
 # 1단계만: 질문에 맞는 글 3편 고르기
 .venv/bin/python retrieve.py "식물은 햇빛을 어떻게 에너지로 바꾸나?"
 
@@ -142,4 +147,4 @@ guide/                 이 교재
 
 ---
 
-[목차](README.md) · [다음: 2. 임베딩 →](02-embedding.md)
+[처음 읽는 사람용 보충](01-beginner.md) · [목차](README.md) · [다음: 2. 임베딩 →](02-embedding.md)

@@ -61,6 +61,7 @@ cp .env.example .env
 
 | 명령 | 보여 주는 것 | 장 |
 | --- | --- | --- |
+| `.venv/bin/python labs/basics/tiny_rag.py` | RAG 세 단계를 모델 없이. `--real`은 15편 | [1 보충](guide/01-beginner.md) |
 | `.venv/bin/python labs/basics/inverted_index.py` | 순차 검색과 역색인, 데이터를 키우면 | [A](guide/A-before-rag.md) |
 | `.venv/bin/python labs/basics/lexical.py --real` | TF, IDF, TF-IDF, BM25 손 계산, 토큰화 비교 | [B](guide/B-lexical.md) |
 | `.venv/bin/python labs/basics/vectors.py` | 내적, 코사인, 정규화, 평균의 약점 | [C](guide/C-vectors.md) |
@@ -88,8 +89,8 @@ retrieve.py          검색과 채점 (임베딩 캐시, dense·hybrid·rerank, 
 bm25.py              두 글자 조각 BM25 (라이브러리 없이 공식만)
 answer.py            증강과 생성
 labs/                모델을 쓰는 공부용 실험 7개
-labs/basics/         표준 라이브러리만 쓰는 기초 실습 7개 (종합 실습 참고 답안은 solutions/)
-guide/               교재 (기초 A~G장, 실측 1~7장, 해설은 guide/answers/, 그림은 guide/img/)
+labs/basics/         표준 라이브러리만 쓰는 기초 실습 8개 (종합 실습 참고 답안은 solutions/)
+guide/               교재 (기초 A~G장, 실측 1~7장, 1장 보충, 해설은 guide/answers/, 그림은 guide/img/)
 docs/ko/, docs/en/   코퍼스 15편 (공부용 한국어 번역, 영어 원문)
 data/answer_key.json 정답표: 질문(ko/en)과 기대하는 글
 study.md             만들면서 나눈 이야기를 순서대로 남긴 일지

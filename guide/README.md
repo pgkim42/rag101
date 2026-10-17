@@ -46,7 +46,7 @@ G. 종합 실습, 전체 데이터 흐름, 다음에 배울 것
 | [E. 검색 결과에서 답변까지](E-grounding.md) | R·A·G 연결, 프롬프트 배치, 관련성 vs 근거, Hallucination이 남는 이유, 인용 vs 검증, Prompt Injection, 검색 실패와 생성 실패 구분 | `labs/basics/prompting.py`, `labs.injection` | `prompting`은 무료, `injection`은 **생성 모델 키 필요** |
 | [F. 평가와 검증](F-evaluation.md) | Ground Truth, Hit·Precision·Recall@k, MRR, nDCG, 정답이 여럿일 때, 작은 데이터셋의 함정, 과적합, 품질과 지연 시간, 재현 가능한 실험 | `labs/basics/metrics.py` | 무료 |
 | [G. 종합 실습](G-capstone.md) | 역색인 + BM25 + 평가기를 처음부터, 오답의 근본 원인 찾기, 기술 고르기, 전체 데이터 흐름, 다음에 배울 것 | `labs/basics/capstone.py` | 무료 |
-| [1. RAG 한눈에 보기](01-rag.md) | 세 단계, 이 저장소의 지도 | `retrieve.py`, `answer.py` | `answer.py`는 키 필요 |
+| [1. RAG 한눈에 보기](01-rag.md) | 세 단계, 이 저장소의 지도. 처음이면 [보충](01-beginner.md) | `labs/basics/tiny_rag.py`, `retrieve.py`, `answer.py` | tiny_rag는 무료, `answer.py`는 키 필요 |
 | [2. 임베딩: 문장을 숫자로](02-embedding.md) | 15편의 임베딩 지도와 유사도 표 | `labs.embedding_map` | 무료 (모델) |
 | [3. 검색: 세 가지 방법](03-search.md) | dense·hybrid·rerank의 실제 오답과 결과 | `retrieve.py --method` | 무료 (모델) |
 | [4. 평가: 검색을 숫자로 재기](04-evaluation.md) | 세 방식의 Hit@1, Recall@k, MRR | `labs.evaluate` | 무료 (모델) |
@@ -135,4 +135,5 @@ uv pip install --python .venv/bin/python -r requirements.txt
 ## 다른 문서
 
 - [저장소 README](../README.md): 무엇이 있고 어떻게 돌리는지 짧게
+- [1장 보충](01-beginner.md): 처음 읽는 사람용 설명, 모델 없는 세 단계 구현, 1장을 돌릴 때 막히는 팁
 - [study.md](../study.md): 이 저장소를 만들면서 나눈 이야기를 순서대로 남긴 일지. 정리된 설명은 이 교재가 맡고, 일지는 당시의 생각 흐름을 남긴다
