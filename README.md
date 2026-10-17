@@ -4,7 +4,8 @@ RAG(retrieval-augmented generation)를 처음부터 손으로 만들어 보며 �
 
 - **검색**: 임베딩, BM25, 둘을 섞기, 재순위화(cross-encoder)
 - **증강과 생성**: 고른 글을 지시와 함께 붙여 생성 모델이 답하게 하기
-- **실험 4개**: 검색 평가 지표, 임베딩 지도, 긴 문서 조각 내기, 답이 없는 질문
+- **실험**: 검색 평가 지표, 임베딩 지도, 긴 문서 조각 내기, 답이 없는 질문, 임베딩 단계 재현, 점수 섞기, 프롬프트 주입
+- **기초 실습**: BM25, 벡터, RRF, ANN, 평가 지표를 표준 라이브러리만으로 손 계산과 맞춰 보기
 
 ## 빠르게 돌려 보기
 
@@ -30,7 +31,19 @@ cp .env.example .env
 
 ## 교재
 
-| 장 | 내용 |
+기초 장(A~G)은 작은 예제와 손 계산으로 원리를 처음부터 세우고, 실측 장(1~7)은 이 저장소의 코드로 15편을 재 본 결과를 다룬다. 읽는 순서는 [교재 목차](guide/README.md)에 있다.
+
+| 기초 장 | 내용 |
+| --- | --- |
+| [A. RAG 이전에 알아야 할 것](guide/A-before-rag.md) | 파라미터와 컨텍스트, RAG vs Fine-tuning, 역색인, 관련성 |
+| [B. 전통적인 정보 검색](guide/B-lexical.md) | 문자열 일치에서 BM25까지 손 계산, 한국어 n-gram |
+| [C. 임베딩의 기초](guide/C-vectors.md) | 내적과 코사인, 문장이 벡터가 되는 다섯 단계를 직접 재현, 실패 사례 |
+| [D. RAG 검색 구조](guide/D-retrieval.md) | Hybrid, 점수 정규화와 RRF, 재순위화, 벡터 DB와 ANN |
+| [E. 검색 결과에서 답변까지](guide/E-grounding.md) | 프롬프트 배치, 인용 vs 근거, Prompt Injection, 실패 구분 |
+| [F. 평가와 검증](guide/F-evaluation.md) | nDCG, 작은 데이터셋의 함정, 과적합, 재현성 |
+| [G. 종합 실습](guide/G-capstone.md) | 처음부터 만드는 검색기, 전체 데이터 흐름, 다음에 배울 것 |
+
+| 실측 장 | 내용 |
 | --- | --- |
 | [1. RAG 한눈에 보기](guide/01-rag.md) | 세 단계, 임베딩과 RAG의 차이, 이 저장소의 지도 |
 | [2. 임베딩: 문장을 숫자로](guide/02-embedding.md) | 문장이 숫자 384개가 되는 과정, 코사인 유사도, 임베딩 지도 그림 |
@@ -44,10 +57,25 @@ cp .env.example .env
 
 ## 실험
 
-저장소 맨 위 폴더에서 `-m`으로 돌린다.
+`labs/basics/`는 표준 라이브러리만 쓰는 기초 실습이다. 파일 경로로 돌리고, 모델도 키도 필요 없다. 손 계산 값을 `assert`로 검사한다.
 
 | 명령 | 보여 주는 것 | 장 |
 | --- | --- | --- |
+| `.venv/bin/python labs/basics/inverted_index.py` | 순차 검색과 역색인, 데이터를 키우면 | [A](guide/A-before-rag.md) |
+| `.venv/bin/python labs/basics/lexical.py --real` | TF, IDF, TF-IDF, BM25 손 계산, 토큰화 비교 | [B](guide/B-lexical.md) |
+| `.venv/bin/python labs/basics/vectors.py` | 내적, 코사인, 정규화, 평균의 약점 | [C](guide/C-vectors.md) |
+| `.venv/bin/python labs/basics/fusion.py` | min-max, z-점수, RRF, 직접 만든 IVF 근사 검색 | [D](guide/D-retrieval.md) |
+| `.venv/bin/python labs/basics/prompting.py` | 프롬프트 조립, 주입 문장, 인용 검사의 한계, 실패 구분 | [E](guide/E-grounding.md) |
+| `.venv/bin/python labs/basics/metrics.py` | nDCG 손 계산, 작은 표본의 흔들림, 과적합 시뮬레이션 | [F](guide/F-evaluation.md) |
+| `.venv/bin/python labs/basics/capstone.py` | 종합 실습: TODO를 채워 검색기를 처음부터 | [G](guide/G-capstone.md) |
+
+모델을 쓰는 실험은 저장소 맨 위 폴더에서 `-m`으로 돌린다.
+
+| 명령 | 보여 주는 것 | 장 |
+| --- | --- | --- |
+| `.venv/bin/python -m labs.embedding_steps` | 문장이 384개가 되는 다섯 단계를 직접 밟기, 임베딩이 약한 곳 | [C](guide/C-vectors.md) |
+| `.venv/bin/python -m labs.score_fusion` | 실제 점수 분포, 섞는 방법별 결과, 단계별 지연 시간 | [D](guide/D-retrieval.md), [F](guide/F-evaluation.md) |
+| `.venv/bin/python -m labs.injection` | 검색 문서 속 지시를 생성 모델이 따르는지 (`--skip-llm`이면 키 없이 프롬프트만) | [E](guide/E-grounding.md) |
 | `.venv/bin/python -m labs.embedding_map` | 384차원 임베딩을 2차원 지도와 유사도 표로 그린다 (`guide/img/`) | [2](guide/02-embedding.md) |
 | `.venv/bin/python -m labs.evaluate` | 세 검색 방식의 Hit@1, Recall@3/5, MRR과 문항별 순위 | [4](guide/04-evaluation.md) |
 | `.venv/bin/python -m labs.chunking` | 긴 문서를 쪼개는 방식 10가지의 검색 결과 | [5](guide/05-chunking.md) |
@@ -59,8 +87,9 @@ cp .env.example .env
 retrieve.py          검색과 채점 (임베딩 캐시, dense·hybrid·rerank, --check)
 bm25.py              두 글자 조각 BM25 (라이브러리 없이 공식만)
 answer.py            증강과 생성
-labs/                공부용 실험 4개
-guide/               교재 (1~7장, 그림은 guide/img/)
+labs/                모델을 쓰는 공부용 실험 7개
+labs/basics/         표준 라이브러리만 쓰는 기초 실습 7개 (종합 실습 참고 답안은 solutions/)
+guide/               교재 (기초 A~G장, 실측 1~7장, 해설은 guide/answers/, 그림은 guide/img/)
 docs/ko/, docs/en/   코퍼스 15편 (공부용 한국어 번역, 영어 원문)
 data/answer_key.json 정답표: 질문(ko/en)과 기대하는 글
 study.md             만들면서 나눈 이야기를 순서대로 남긴 일지
