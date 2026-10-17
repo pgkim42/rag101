@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="680" font-family="Apple SD Gothic Neo, Noto Sans KR, Malgun Gothic, sans-serif">
+<rect width="100%" height="100%" fill="white"/>
+<text x="20" y="28" font-size="18" font-weight="bold">한국어 글 15편과 질문 15개의 임베딩 지도 (384차원 → 2차원)</text>
+<line x1="179.7" y1="155.5" x2="148.2" y2="110.0" stroke="#bbbbbb"/>
+<line x1="285.2" y1="358.5" x2="110.0" y2="288.2" stroke="#bbbbbb"/>
+<line x1="748.3" y1="289.4" x2="778.9" y2="251.8" stroke="#d62728" stroke-width="2" stroke-dasharray="6 4"/>
+<line x1="215.7" y1="458.7" x2="158.9" y2="446.6" stroke="#bbbbbb"/>
+<line x1="576.0" y1="435.0" x2="670.6" y2="434.5" stroke="#bbbbbb"/>
+<line x1="660.2" y1="293.7" x2="749.7" y2="343.9" stroke="#bbbbbb"/>
+<line x1="399.5" y1="424.1" x2="352.6" y2="470.0" stroke="#bbbbbb"/>
+<line x1="274.3" y1="190.8" x2="409.3" y2="164.6" stroke="#bbbbbb"/>
+<line x1="181.0" y1="362.4" x2="197.8" y2="352.6" stroke="#d62728" stroke-width="2" stroke-dasharray="6 4"/>
+<line x1="753.1" y1="332.6" x2="850.0" y2="266.7" stroke="#bbbbbb"/>
+<line x1="265.4" y1="331.3" x2="133.1" y2="281.5" stroke="#bbbbbb"/>
+<line x1="239.8" y1="463.4" x2="222.7" y2="520.0" stroke="#d62728" stroke-width="2" stroke-dasharray="6 4"/>
+<line x1="465.0" y1="320.6" x2="535.5" y2="317.6" stroke="#bbbbbb"/>
+<line x1="229.6" y1="173.9" x2="172.0" y2="180.9" stroke="#bbbbbb"/>
+<line x1="799.2" y1="296.0" x2="844.7" y2="288.4" stroke="#bbbbbb"/>
+<circle cx="148.2" cy="110.0" r="8" fill="#1f77b4"/>
+<text x="157.2" y="101.0" font-size="14">광합성</text>
+<circle cx="110.0" cy="288.2" r="8" fill="#1f77b4"/>
+<text x="39.4" y="279.2" font-size="14">물의 순환</text>
+<circle cx="778.9" cy="251.8" r="8" fill="#1f77b4"/>
+<text x="787.9" y="242.8" font-size="14">방화벽</text>
+<circle cx="158.9" cy="446.6" r="8" fill="#1f77b4"/>
+<text x="167.9" y="437.6" font-size="14">복리</text>
+<circle cx="670.6" cy="434.5" r="8" fill="#1f77b4"/>
+<text x="679.6" y="425.5" font-size="14">백신의 원리</text>
+<circle cx="749.7" cy="343.9" r="8" fill="#1f77b4"/>
+<text x="758.7" y="359.9" font-size="14">DNS</text>
+<circle cx="352.6" cy="470.0" r="8" fill="#1f77b4"/>
+<text x="361.6" y="461.0" font-size="14">피타고라스 정리</text>
+<circle cx="409.3" cy="164.6" r="8" fill="#1f77b4"/>
+<text x="418.3" y="155.6" font-size="14">태양광 패널의 원리</text>
+<circle cx="197.8" cy="352.6" r="8" fill="#1f77b4"/>
+<text x="113.9" y="343.6" font-size="14">밀물과 썰물</text>
+<circle cx="850.0" cy="266.7" r="8" fill="#1f77b4"/>
+<text x="859.0" y="257.7" font-size="14">HTTP와 HTTPS</text>
+<circle cx="133.1" cy="281.5" r="8" fill="#1f77b4"/>
+<text x="142.1" y="272.5" font-size="14">4행정 기관</text>
+<circle cx="222.7" cy="520.0" r="8" fill="#1f77b4"/>
+<text x="231.7" y="511.0" font-size="14">인플레이션</text>
+<circle cx="535.5" cy="317.6" r="8" fill="#1f77b4"/>
+<text x="544.5" y="333.6" font-size="14">노이즈 캔슬링 헤드폰</text>
+<circle cx="172.0" cy="180.9" r="8" fill="#1f77b4"/>
+<text x="101.4" y="171.9" font-size="14">탄소 순환</text>
+<circle cx="844.7" cy="288.4" r="8" fill="#1f77b4"/>
+<text x="853.7" y="304.4" font-size="14">VPN</text>
+<circle cx="179.7" cy="155.5" r="5" fill="white" stroke="#555555" stroke-width="2"/>
+<text x="188.7" y="146.5" font-size="11" fill="#555555">Q1</text>
+<circle cx="285.2" cy="358.5" r="5" fill="white" stroke="#555555" stroke-width="2"/>
+<text x="294.2" y="349.5" font-size="11" fill="#555555">Q2</text>
+<circle cx="748.3" cy="289.4" r="5" fill="white" stroke="#d62728" stroke-width="2"/>
+<text x="757.3" y="280.4" font-size="11" fill="#d62728">Q3</text>
+<circle cx="215.7" cy="458.7" r="5" fill="white" stroke="#555555" stroke-width="2"/>
+<text x="224.7" y="449.7" font-size="11" fill="#555555">Q4</text>
+<circle cx="576.0" cy="435.0" r="5" fill="white" stroke="#555555" stroke-width="2"/>
+<text x="585.0" y="426.0" font-size="11" fill="#555555">Q5</text>
+<circle cx="660.2" cy="293.7" r="5" fill="white" stroke="#555555" stroke-width="2"/>
+<text x="669.2" y="284.7" font-size="11" fill="#555555">Q6</text>
+<circle cx="399.5" cy="424.1" r="5" fill="white" stroke="#555555" stroke-width="2"/>
+<text x="408.5" y="415.1" font-size="11" fill="#555555">Q7</text>
+<circle cx="274.3" cy="190.8" r="5" fill="white" stroke="#555555" stroke-width="2"/>
+<text x="283.3" y="181.8" font-size="11" fill="#555555">Q8</text>
+<circle cx="181.0" cy="362.4" r="5" fill="white" stroke="#d62728" stroke-width="2"/>
+<text x="190.0" y="375.4" font-size="11" fill="#d62728">Q9</text>
+<circle cx="753.1" cy="332.6" r="5" fill="white" stroke="#555555" stroke-width="2"/>
+<text x="762.1" y="323.6" font-size="11" fill="#555555">Q10</text>
+<circle cx="265.4" cy="331.3" r="5" fill="white" stroke="#555555" stroke-width="2"/>
+<text x="274.4" y="322.3" font-size="11" fill="#555555">Q11</text>
+<circle cx="239.8" cy="463.4" r="5" fill="white" stroke="#d62728" stroke-width="2"/>
+<text x="248.8" y="454.4" font-size="11" fill="#d62728">Q12</text>
+<circle cx="465.0" cy="320.6" r="5" fill="white" stroke="#555555" stroke-width="2"/>
+<text x="474.0" y="311.6" font-size="11" fill="#555555">Q13</text>
+<circle cx="229.6" cy="173.9" r="5" fill="white" stroke="#555555" stroke-width="2"/>
+<text x="238.6" y="164.9" font-size="11" fill="#555555">Q14</text>
+<circle cx="799.2" cy="296.0" r="5" fill="white" stroke="#555555" stroke-width="2"/>
+<text x="808.2" y="287.0" font-size="11" fill="#555555">Q15</text>
+<circle cx="30" cy="658" r="8" fill="#1f77b4"/><text x="44" y="663" font-size="13">글</text>
+<circle cx="100" cy="658" r="5" fill="white" stroke="#555" stroke-width="2"/>
+<text x="112" y="663" font-size="13">질문 (선은 기대한 글로 이어짐)</text>
+<line x1="330" y1="658" x2="370" y2="658" stroke="#d62728" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="378" y="663" font-size="13" fill="#d62728">임베딩만 쓰면(dense) 1등을 놓친 질문</text>
+</svg>
