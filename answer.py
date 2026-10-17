@@ -15,10 +15,9 @@ import sys
 
 from dotenv import load_dotenv
 
-from retrieve import MODEL_NAME, ROOT, load_chunks, search
+from retrieve import ROOT, build_searcher, search
 
 from openai import APIError, OpenAI
-from sentence_transformers import SentenceTransformer
 
 DEFAULT_LLM = "gpt-6-luna"
 
@@ -66,9 +65,7 @@ def main() -> None:
     args = parser.parse_args()
 
     llm = load_settings()
-    chunks = load_chunks(args.lang)
-    print(f"임베딩 모델 준비: {MODEL_NAME}")
-    hits = search(args.question, chunks, SentenceTransformer(MODEL_NAME), args.k)
+    hits = search(args.question, build_searcher(args.lang), args.k)
 
     print("\n근거로 붙인 글:")
     for rank, (chunk, score) in enumerate(hits, start=1):

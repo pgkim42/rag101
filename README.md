@@ -12,7 +12,7 @@ RAG(retrieval-augmented generation)를 한 단계씩 직접 만들어 보며 익
 ## 하는 일
 
 1. `docs/ko`(또는 `docs/en`)의 글 15편을 읽는다. 파일 하나가 조각 하나다.
-2. 질문과 글을 같은 임베딩 모델로 숫자 384개짜리 벡터로 바꾼다.
+2. 질문과 글을 같은 임베딩 모델로 숫자 384개짜리 벡터로 바꾼다. 글 쪽 결과는 `.cache/`에 저장해 두고, 글이나 모델이 바뀌었을 때만 다시 계산한다.
 3. 벡터 길이를 1로 맞추고 서로 곱해 코사인 유사도를 낸다.
 4. 점수가 큰 순서로 위에서 k개를 보여 준다.
 
@@ -113,11 +113,11 @@ docs/en/             영어 원문 15편
 docs/ko/             공부용 한국어 번역 15편
 data/answer_key.json 질문(ko/en)과 기대하는 글
 study.md             만들면서 정리한 학습 노트
+.cache/              글 임베딩 캐시 (실행하면 생기고, 커밋하지 않는다)
 ```
 
 ## 다음 단계
 
-- 글 임베딩을 미리 계산해 저장하기. 지금은 질문할 때마다 15편을 다시 계산한다.
 - 옆 주제를 집는 검색을 재순위화(rerank)나 단어 검색(BM25)과 섞어서 고치기
 - 그다음: 벡터 DB, 긴 문서 조각 내기, 더 큰 한국어 데이터셋([allganize/RAG-Evaluation-Dataset-KO](https://huggingface.co/datasets/allganize/RAG-Evaluation-Dataset-KO))
 
