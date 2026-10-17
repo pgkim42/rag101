@@ -15,7 +15,7 @@ import sys
 
 from dotenv import load_dotenv
 
-from retrieve import ROOT, build_searcher, search
+from retrieve import METHODS, ROOT, build_searcher, search
 
 from openai import APIError, OpenAI
 
@@ -61,11 +61,12 @@ def main() -> None:
     parser.add_argument("question", help="물어볼 질문")
     parser.add_argument("--lang", choices=("ko", "en"), default="ko")
     parser.add_argument("--k", type=int, default=3, help="답의 근거로 붙일 글 개수")
+    parser.add_argument("--method", choices=METHODS, default="rerank", help="검색 방식")
     parser.add_argument("--show-prompt", action="store_true", help="모델에게 보낸 입력을 보여 준다")
     args = parser.parse_args()
 
     llm = load_settings()
-    hits = search(args.question, build_searcher(args.lang), args.k)
+    hits = search(args.question, build_searcher(args.lang, args.method), args.k)
 
     print("\n근거로 붙인 글:")
     for rank, (chunk, score) in enumerate(hits, start=1):
